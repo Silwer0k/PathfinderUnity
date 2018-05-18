@@ -1,7 +1,4 @@
 sceneSetups:
-- path: Assets/MainLevel.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/Fight.unity
+- path: Assets/Scenes/MainLevel.unity
   isLoaded: 1
   isActive: 1
