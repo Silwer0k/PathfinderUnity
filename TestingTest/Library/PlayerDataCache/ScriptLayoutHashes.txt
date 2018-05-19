@@ -186,7 +186,7 @@ a8ed45ab553b07236625df6cc6ac449c TextMeshPro-2017.3-Editor.dll:TMPro.EditorUtili
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.TMP_DigitValidator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
-39ec5f86cd142c11213e938a957c86ab Assembly-CSharp.dll:.HeroChoice
+79c266d0039c8b458658d15522d46b62 Assembly-CSharp.dll:.HeroChoice
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TeleType
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerController
 43a10b44b072ae8c10934e47faa07bbd Assembly-CSharp.dll:.CardMovementScript
@@ -239,3 +239,4 @@ af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExam
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 7213c88fa3d8fe57b9d5c5e147ed6fec Assembly-CSharp.dll:.GMController
+afb4bf0b588d9c97985088c1865d9b70 Assembly-CSharp.dll:.HeroCharacteristics

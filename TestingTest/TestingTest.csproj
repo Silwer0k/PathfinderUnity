@@ -297,6 +297,7 @@
     <Compile Include="Assets\Scripts\DemoStairs.cs" />
     <Compile Include="Assets\Scripts\DropPlaceScript.cs" />
     <Compile Include="Assets\Scripts\GMController.cs" />
+    <Compile Include="Assets\Scripts\HeroCharacteristics.cs" />
     <Compile Include="Assets\Scripts\HeroChoice.cs" />
     <Compile Include="Assets\Scripts\NetworkManagerCustom.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />

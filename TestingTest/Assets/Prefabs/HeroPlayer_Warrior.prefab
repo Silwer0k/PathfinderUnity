@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61606362925574422}
   - component: {fileID: 114851139130286148}
   - component: {fileID: 20566469346390984}
+  - component: {fileID: 114375475229457904}
   - component: {fileID: 50648088957169346}
   - component: {fileID: 114378761658882142}
   - component: {fileID: 114275310987231202}
@@ -138,6 +139,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab85308ac3fe5b4c887abe823261f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114375475229457904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235788693719172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440a523525156614a95d6da46e86aed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agility: 2
+  power: 9
+  inteintelligence: 2
+  damage: 0
+  health: 0
 --- !u!114 &114378761658882142
 MonoBehaviour:
   m_ObjectHideFlags: 1
