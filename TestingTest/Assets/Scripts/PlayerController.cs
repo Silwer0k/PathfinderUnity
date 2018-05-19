@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class PlayerController : NetworkBehaviour 
 {
-	public float movement_speed = 2;
 	private Vector2 targetPos;
 	private bool wasPressed = false;
+    private Vector2 dirVector;
+    private Rigidbody2D rgb2d;
 
 	void Start()
 	{
+        rgb2d = GetComponent<Rigidbody2D>();
+
 		if (!isLocalPlayer) 
 		{
             gameObject.GetComponent<Camera>().enabled = false;
@@ -29,15 +32,18 @@ public class PlayerController : NetworkBehaviour
 			Camera playerCam = gameObject.GetComponent<Camera>();
 			Vector2 pos = Input.mousePosition;
 			targetPos = playerCam.ScreenToWorldPoint(pos);
+            dirVector = targetPos - (Vector2)transform.position;
 		}
         if (wasPressed)
-            MovePlayer();
+            rgb2d.AddForce(dirVector,ForceMode2D.Force);
 
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
-	}
-
-	void MovePlayer()
-	{
-		transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * movement_speed);
-	}
+        if (Vector2.Distance((Vector2)transform.position, targetPos) < 0.1)
+        {
+            rgb2d.isKinematic = true;
+            rgb2d.velocity = Vector2.zero;
+            rgb2d.angularVelocity = 0f;
+            rgb2d.isKinematic = false;
+        }
+            
+    }
 }

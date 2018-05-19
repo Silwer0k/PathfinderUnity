@@ -14626,7 +14626,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: 0}
+  m_Offset: {x: 0.49171376, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14637,7 +14637,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 1}
+  m_Size: {x: 0.9834275, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &800596633
 Transform:
@@ -27707,7 +27707,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: 0}
+  m_Offset: {x: -0.49049664, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -27718,7 +27718,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 1}
+  m_Size: {x: 0.9809933, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &1503669398
 Transform:
@@ -30640,6 +30640,22 @@ Prefab:
     - target: {fileID: 21289116, guid: 6d1932dce3242e74eb00041cfef1b983, type: 2}
       propertyPath: m_SortingLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846506, guid: 6d1932dce3242e74eb00041cfef1b983, type: 2}
+      propertyPath: m_Points.Array.data[1].x
+      value: 3.4939198
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846506, guid: 6d1932dce3242e74eb00041cfef1b983, type: 2}
+      propertyPath: m_Points.Array.data[1].y
+      value: -0.00781703
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846506, guid: 6d1932dce3242e74eb00041cfef1b983, type: 2}
+      propertyPath: m_Points.Array.data[0].x
+      value: -1.5162129
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846506, guid: 6d1932dce3242e74eb00041cfef1b983, type: 2}
+      propertyPath: m_Points.Array.data[0].y
+      value: -0.007817268
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d1932dce3242e74eb00041cfef1b983, type: 2}

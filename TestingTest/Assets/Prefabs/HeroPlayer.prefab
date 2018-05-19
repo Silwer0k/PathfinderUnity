@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4813521587187816}
   - component: {fileID: 212691573716698992}
   - component: {fileID: 61188346936838320}
-  - component: {fileID: 114141900744368836}
   - component: {fileID: 114659249734591554}
   - component: {fileID: 20901803917913288}
   - component: {fileID: 50586902559639410}
   - component: {fileID: 114920207164340512}
+  - component: {fileID: 114916658589842950}
   m_Layer: 0
   m_Name: HeroPlayer
   m_TagString: Player
@@ -93,15 +93,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_Mass: 0.25
+  m_LinearDrag: 8
+  m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61188346936838320
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -127,18 +127,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.2}
   m_EdgeRadius: 0
---- !u!114 &114141900744368836
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1186663610071184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab85308ac3fe5b4c887abe823261f4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement_speed: 2
 --- !u!114 &114659249734591554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,6 +159,17 @@ MonoBehaviour:
     i15: 225
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!114 &114916658589842950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186663610071184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab85308ac3fe5b4c887abe823261f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114920207164340512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 2
   m_SendInterval: 0.1
-  m_SyncRotationAxis: 3
+  m_SyncRotationAxis: 0
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
   m_MovementTheshold: 0.001
