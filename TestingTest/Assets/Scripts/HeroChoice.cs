@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using TMPro;
 
-public class HeroChoice : NetworkBehaviour {
+public class HeroChoice : MonoBehaviour {
 
 	public Sprite[] heroesSprites;
 	public string[] heroesNames;
@@ -50,13 +50,8 @@ public class HeroChoice : NetworkBehaviour {
 	public void AcceptChoise()
 	{
 		gameObject.SetActive (false);
-        CmdChangePlayerSprite();
+        NetworkManagerCustom.singleton.playerPrefab.GetComponent<SpriteRenderer>().sprite = heroesSprites[curnum];
         ClientScene.AddPlayer (1);
 	}
 
-    [Command]
-    void CmdChangePlayerSprite()
-    {
-        NetworkManagerCustom.singleton.playerPrefab.GetComponent<SpriteRenderer>().sprite = heroesSprites[curnum];
-    }
 }
