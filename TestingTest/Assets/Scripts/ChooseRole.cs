@@ -10,7 +10,7 @@ public class ChooseRole : MonoBehaviour {
 
 	public void SetupGameMaster()
 	{
-		ClientScene.AddPlayer (0);
+		ClientScene.AddPlayer (-1);
 	}
 
 	void Update()

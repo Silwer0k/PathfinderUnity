@@ -7,8 +7,6 @@ public class SessionInfo : NetworkBehaviour {
 
 	[SyncVar]
 	private bool isGM_exist = false;
-	[SyncVar]
-	private int countOfConnections = 0;
 	private NetworkConnection gmConnection = null;
 
 	public bool GetIsGMExist()
@@ -19,21 +17,6 @@ public class SessionInfo : NetworkBehaviour {
 	public void SetIsGMExist(bool flag)
 	{
 		isGM_exist = flag;
-	}
-
-	public int GetCountOfConnections()
-	{
-		return countOfConnections;
-	}
-
-	public void AddConnection()
-	{
-		countOfConnections += 1;
-	}
-
-	public void RemoveConnection()
-	{
-		countOfConnections -= 1;
 	}
 
 	public void AddGMConnection(NetworkConnection conn)

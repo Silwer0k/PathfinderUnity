@@ -9,7 +9,7 @@ public class HeroChoice : MonoBehaviour {
 
 	public Sprite[] heroesSprites;
 	public string[] heroesNames;
-	private int curnum = 0;
+	private short curnum = 0;
 
 	void Start()
 	{
@@ -27,10 +27,7 @@ public class HeroChoice : MonoBehaviour {
 		if (curnum < (heroesSprites.Length - 1)) 
 		{
 			curnum += 1;
-		} else 
-		{
-			curnum = 0;
-		}
+		} 
 		ChangeSprite (curnum);
 	}
 
@@ -40,18 +37,13 @@ public class HeroChoice : MonoBehaviour {
 		{
 			curnum -= 1;
 			ChangeSprite (curnum);
-		} else 
-		{
-			curnum = heroesSprites.Length - 1;
 		}
 		ChangeSprite (curnum);
 	}
 
 	public void AcceptChoise()
-	{
-		gameObject.SetActive (false);
-        NetworkManagerCustom.singleton.playerPrefab.GetComponent<SpriteRenderer>().sprite = heroesSprites[curnum];
-        ClientScene.AddPlayer (1);
+    { 
+        ClientScene.AddPlayer (curnum);
 	}
 
 }

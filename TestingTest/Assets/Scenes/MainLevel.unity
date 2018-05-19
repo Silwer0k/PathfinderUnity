@@ -3566,9 +3566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroesSprites:
+  - {fileID: 21300000, guid: d1ada534a1ad143469a3182dbef01a7d, type: 3}
   - {fileID: 21300000, guid: cf279628c192f1241bbdccaed8f1f498, type: 3}
   - {fileID: 21300000, guid: 3058e9d78eb65514a947143e9963ddc4, type: 3}
-  - {fileID: 21300000, guid: d1ada534a1ad143469a3182dbef01a7d, type: 3}
   - {fileID: 21300000, guid: 91a36906372f45842a9deeb5120bef42, type: 3}
   heroesNames:
   - Necromancer
@@ -38108,7 +38108,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 179886577}
+      - m_Target: {fileID: 440352537}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

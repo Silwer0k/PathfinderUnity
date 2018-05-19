@@ -66,7 +66,7 @@ public class NetworkManagerCustom : NetworkManager {
     {
         GameObject player;
         List<Transform> startPosititons = NetworkManager.singleton.startPositions;
-        if (playerControllerID == 0)
+        if (playerControllerID == -1)
         {
             player = Instantiate(spawnPrefabs[0],startPositions[0].position,startPositions[0].rotation);
             GameObject.Find("SessionInformation").GetComponent<SessionInfo>().SetIsGMExist(true);
@@ -74,7 +74,7 @@ public class NetworkManagerCustom : NetworkManager {
         }
         else
         {
-            player = GameObject.Instantiate(NetworkManagerCustom.singleton.playerPrefab, startPositions[0].position, startPositions[0].rotation);
+            player = GameObject.Instantiate(spawnPrefabs[playerControllerID+1], startPositions[0].position, startPositions[0].rotation);
         }
 
         NetworkServer.AddPlayerForConnection(conn, player, playerControllerID);
@@ -82,13 +82,13 @@ public class NetworkManagerCustom : NetworkManager {
 
     public override void OnServerDisconnect(NetworkConnection conn)
     {
+        base.OnServerDisconnect(conn);
         var sessionInfoComp = GameObject.Find("SessionInformation").GetComponent<SessionInfo>();
         var gmConn = sessionInfoComp.GetGMConnection();
         if (conn == gmConn)
         {
-            sessionInfoComp.RemoveConnection();
+            sessionInfoComp.RemoveGMConnection();
             sessionInfoComp.SetIsGMExist(false);
-            NetworkServer.DestroyPlayersForConnection(conn);
         }
     }
 }
