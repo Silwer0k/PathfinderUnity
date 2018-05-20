@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using TMPro;
 
-public class HeroChoice : MonoBehaviour {
+public class HeroChoice : NetworkBehaviour {
 
 	public GameObject[] heroes;
 	public string[] heroesNames;
@@ -94,9 +94,19 @@ public class HeroChoice : MonoBehaviour {
     public void AcceptChoise()
     {
         var prefs = NetworkManagerCustom.singleton.spawnPrefabs;
-        prefs[curnum + 1].GetComponent<HeroCharacteristics>().SetCharacteristics(powerCntr,agilityCntr,intelligenceCntr,healthCntrerCntr,damageCntr,evasionCntr);
+        HeroCharacteristics prefChars = prefs[curnum + 1].GetComponent<HeroCharacteristics>();
+        var defaultPower = prefChars.power;
+        var defaultAgility = prefChars.agility;
+        var defaultintelligence = prefChars.inteintelligence;
+        var defaultHealth = prefChars.GetHealth();
+        var defaultDamage = prefChars.GetDamage();
+        var defaultEvasion = prefChars.GetEvasion();
+        prefChars.SetCharacteristics(powerCntr,agilityCntr,intelligenceCntr,healthCntrerCntr,damageCntr,evasionCntr);
         ClientScene.AddPlayer(curnum);
+        prefChars.SetCharacteristics(defaultPower, defaultAgility, defaultintelligence, defaultHealth, defaultDamage, defaultEvasion);
     }
+
+    
 
     public void PowerUp()
     {

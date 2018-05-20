@@ -13,11 +13,13 @@ public class HeroCharacteristics : NetworkBehaviour {
     public int inteintelligence;
 
     [SyncVar]
-    private double damage;
+    public double damage;
     [SyncVar]
-    private int health;
+    public int health;
     [SyncVar]
-    private float evasion;
+    public float evasion;
+    [SyncVar]
+    public int freePoints;
 
     public void SetHealth(int new_health)
     {
@@ -47,6 +49,16 @@ public class HeroCharacteristics : NetworkBehaviour {
     public float GetEvasion()
     {
         return evasion;
+    }
+
+    public int GetFreePoints()
+    {
+        return freePoints;
+    }
+
+    public void AddFreePoints(int add)
+    {
+        freePoints += add;
     }
 
     public double CalcDamage(int i)

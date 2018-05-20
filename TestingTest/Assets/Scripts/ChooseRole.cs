@@ -15,7 +15,7 @@ public class ChooseRole : MonoBehaviour {
 
 	void Update()
 	{	
-		if (sessionInfo.GetComponent<SessionInfo> ().GetIsGMExist ())
+		if (sessionInfo.GetComponent<SessionInfo> ().GetIsGMExist () && gameObject.activeSelf)
 			GameObject.Find ("GMBtn").GetComponent<Button> ().interactable = false;
 		else
 			GameObject.Find ("GMBtn").GetComponent<Button> ().interactable = true;

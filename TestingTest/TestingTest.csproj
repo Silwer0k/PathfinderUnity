@@ -303,6 +303,7 @@
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SessionInfo.cs" />
+    <Compile Include="Assets\Scripts\ShowCharacteristics.cs" />
     <Compile Include="Assets\Scripts\SpriteSorter.cs" />
     <Compile Include="Assets\Scripts\TopDownCharacter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

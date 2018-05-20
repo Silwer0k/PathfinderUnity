@@ -9,6 +9,10 @@ public class PlayerController : NetworkBehaviour
 	private bool wasPressed = false;
     private Vector2 dirVector;
     private Rigidbody2D rgb2d;
+    private GameObject goalObj;
+    private bool isAchieved = false;
+
+    public GameObject movementGoalPref;
 
 	void Start()
 	{
@@ -28,22 +32,28 @@ public class PlayerController : NetworkBehaviour
 		
 		if (Input.GetMouseButtonDown(1))
 		{
+            if (goalObj != null)
+                Destroy(goalObj);
+            isAchieved = false;
 			wasPressed = true;
 			Camera playerCam = gameObject.GetComponent<Camera>();
 			Vector2 pos = Input.mousePosition;
 			targetPos = playerCam.ScreenToWorldPoint(pos);
+            goalObj = GameObject.Instantiate(movementGoalPref, targetPos, movementGoalPref.transform.rotation);
             dirVector = targetPos - (Vector2)transform.position;
 		}
         if (wasPressed)
-            rgb2d.AddForce(dirVector,ForceMode2D.Force);
+            rgb2d.AddForceAtPosition(dirVector, targetPos);
+    }
 
-        if (Vector2.Distance((Vector2)transform.position, targetPos) < 0.1)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject == goalObj)
         {
-            rgb2d.isKinematic = true;
-            rgb2d.velocity = Vector2.zero;
-            rgb2d.angularVelocity = 0f;
-            rgb2d.isKinematic = false;
+            Destroy(goalObj);
+            rgb2d.velocity = Vector3.zero;
+            wasPressed = false;
+            isAchieved = true;
         }
-            
     }
 }

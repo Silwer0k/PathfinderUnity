@@ -142,6 +142,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+0a50e3b802069493e37368bf04005b1a Assembly-CSharp.dll:.HeroCharacteristics
 50a0fa002cfc67638c87a901e46b763e Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
 1df234784afa2cbe0613283a35c66908 Assembly-CSharp.dll:.NetworkManagerCustom
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.Benchmark03
@@ -239,4 +240,4 @@ af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExam
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 7213c88fa3d8fe57b9d5c5e147ed6fec Assembly-CSharp.dll:.GMController
-afb4bf0b588d9c97985088c1865d9b70 Assembly-CSharp.dll:.HeroCharacteristics
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShowCharacteristics
